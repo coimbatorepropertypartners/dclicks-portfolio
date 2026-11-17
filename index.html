@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D Clicks — Creative Portfolio</title>
+<meta name="description" content="D Clicks — leading with the perfect mix of creativity and strategy. Branding, social media, packaging, video and performance marketing from Coimbatore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y:#ffc20e; --y2:#ffd84d; --ink:#1e1f2a; --ink2:#2a2c3a; --ink3:#363949;
+  --paper:#ffffff; --mist:#f4f4f6; --line:#e6e6ec; --muted:#6b6e7f; --muted2:#a3a6b8;
+  --r:26px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+section,.carousel{overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:clip}
+h1,h2,h3,h4,.syne{font-family:Poppins,Manrope,sans-serif;letter-spacing:-.03em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+img{display:block}
+.wrap{max-width:1220px;margin:0 auto;padding:0 28px}
+section{position:relative;padding:120px 0}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.tag::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--y);box-shadow:16px 0 0 var(--y)}
+.tag{padding-left:2px}
+.tag span{margin-left:16px}
+.h2{font-size:clamp(2.2rem,4.6vw,4rem);font-weight:700;margin-top:18px}
+.h2 em{font-style:normal;background:var(--y);padding:0 .14em;border-radius:.18em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dark{background:var(--ink);color:#fff}
+.dark .h2 em{color:var(--ink)}
+.lead{color:var(--muted);font-size:1.12rem;max-width:520px}
+.dark .lead{color:var(--muted2)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:.95rem;transition:transform .25s,box-shadow .25s,background .25s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(30,31,42,.6)}
+.btn.y{background:var(--y);color:var(--ink)}
+.btn.y:hover{box-shadow:0 14px 30px -10px rgba(255,194,14,.8)}
+.btn.o{background:transparent;color:inherit;border:1.5px solid currentColor}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:clamp(24px,4vh,48px)}
+
+/* deck */
+html,body{height:100%;overflow:hidden}
+.deck{position:fixed;inset:0;overflow:hidden}
+.track{height:100%;transition:transform .9s cubic-bezier(.77,0,.18,1);will-change:transform}
+.track>.pg{height:100%;min-height:0!important;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;padding:96px 0 70px!important;display:flex;flex-direction:column;justify-content:safe center}
+.track>.pg::-webkit-scrollbar{width:6px}.track>.pg::-webkit-scrollbar-thumb{background:rgba(127,127,127,.35);border-radius:9px}
+.track>.hero{padding-top:90px!important}
+.track>.pg.contact{padding-top:80px!important}
+/* founders */
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:24px;perspective:1200px}
+.fd{background:var(--ink2);border-radius:30px;padding:34px;transition:transform .15s ease-out;position:relative;overflow:hidden}
+.fd::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:30px solid rgba(255,194,14,.12)}
+.fd-top{display:flex;gap:22px;align-items:center;margin-bottom:20px;position:relative;z-index:1}
+.fd-ph{width:120px;height:120px;border-radius:50%;padding:5px;background:conic-gradient(var(--y),#ffe48a,var(--y));flex:none}
+.fd-ph img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--ink2)}
+.fd-role{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:var(--y);color:var(--ink);padding:4px 12px;border-radius:999px}
+.fd h3{font-size:2.1rem;margin:10px 0 4px;color:#fff}
+.fd-focus{color:var(--y);font-weight:700;font-size:.98rem}
+.fd p{color:var(--muted2);font-size:1.02rem;position:relative;z-index:1}
+.fd-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.fd-tags span{font-size:.8rem;font-weight:700;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff}
+.fquote{margin-top:26px;color:var(--muted2);font-style:italic;font-size:1.05rem;max-width:900px;border-left:3px solid var(--y);padding-left:18px}
+/* studio */
+.studio{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
+.pinfo{margin-top:22px;min-height:150px}
+.pk-kind{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:var(--y);padding:5px 12px;border-radius:999px}
+.pinfo h3{font-size:1.7rem;margin:14px 0 2px}
+.pk-brand{font-weight:700;color:var(--muted)}
+.pinfo p{color:var(--muted);margin-top:10px;max-width:440px}
+.pthumbs{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:18px}
+.pth{aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:2px solid transparent;background:#fff;cursor:pointer;padding:0;transition:transform .25s,border-color .25s;box-shadow:0 6px 16px -10px rgba(0,0,0,.4)}
+.pth img{width:100%;height:100%;object-fit:cover}
+.pth.wide img{object-fit:cover;object-position:42% 50%}
+.pth:hover{transform:translateY(-4px)}
+.pth.on{border-color:var(--y);box-shadow:0 0 0 3px rgba(255,194,14,.35)}
+.st-stage{position:relative;height:min(68vh,620px);border-radius:32px;background:radial-gradient(circle at 50% 40%,#fff 0%,#eceaf2 70%);overflow:hidden}
+.st-stage::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--y);left:15%;top:8%;opacity:.9}
+#pk3d{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}
+#pk3d:active{cursor:grabbing}
+.pk-fallback{position:absolute;inset:10%;width:80%;height:80%;object-fit:contain}
+.st-hint{position:absolute;left:20px;top:18px;font-size:.75rem;font-weight:700;background:#fff;padding:6px 12px;border-radius:999px;box-shadow:0 6px 18px -10px rgba(0,0,0,.35)}
+.st-nav{position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:6px;box-shadow:0 8px 24px -12px rgba(0,0,0,.35)}
+.st-nav button{width:40px;height:40px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:1rem;cursor:pointer}
+.st-nav span{font-family:Poppins;font-weight:700;font-size:.85rem}
+/* label gallery */
+.lgal{columns:6 170px;column-gap:12px}
+.lg{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden;position:relative;cursor:zoom-in;background:#fff;border:1px solid var(--line)}
+.lg img{width:100%;transition:transform .5s}
+.lg:hover img{transform:scale(1.05)}
+.lg figcaption{position:absolute;left:8px;bottom:8px;right:8px;font-size:.7rem;font-weight:700;background:rgba(30,31,42,.82);color:#fff;padding:4px 10px;border-radius:999px;opacity:0;transition:opacity .3s}
+.lg:hover figcaption{opacity:1}
+/* brochure chrome */
+.pg{min-height:100vh;min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center}
+.pg>.wrap{width:100%}
+.chrome{position:fixed;inset:22px 28px auto;z-index:60;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.clogo{height:44px;pointer-events:auto;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);padding:8px 16px;border-radius:999px;box-sizing:border-box}
+body.ondark .clogo{background:rgba(30,31,42,.8)}
+body.ondark .pcount{background:rgba(30,31,42,.8);color:#fff}
+.pcount{font-family:Poppins;font-weight:800;font-size:.95rem;letter-spacing:.06em;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);padding:8px 16px;border-radius:999px;color:var(--ink)}
+.pcount #pcur{color:var(--ink);background:var(--y);border-radius:999px;padding:1px 8px}
+.pbar{position:fixed;left:0;top:0;height:4px;width:100%;background:var(--y);transform-origin:left;transform:scaleX(0);z-index:70}
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:60;display:flex;flex-direction:column;gap:10px}
+.rail a{display:flex;align-items:center;justify-content:flex-end;gap:10px;height:16px}
+.rail i{width:8px;height:8px;border-radius:99px;background:rgba(30,31,42,.25);transition:all .35s}
+.rail a.on i{height:26px;background:var(--y)}
+.rail span{font-size:.72rem;font-weight:700;letter-spacing:.06em;opacity:0;transform:translateX(8px);transition:all .3s;white-space:nowrap;background:var(--ink);color:#fff;padding:3px 10px;border-radius:999px}
+.rail a:hover span{opacity:1;transform:none}
+.rail a.on span{background:var(--y);color:var(--ink)}
+body.ondark .rail i{background:rgba(255,255,255,.3)}
+.nextbtn{position:fixed;right:24px;bottom:24px;z-index:60;width:56px;height:56px;border-radius:50%;border:0;background:var(--y);color:var(--ink);font-size:1.3rem;font-weight:800;cursor:pointer;box-shadow:0 14px 30px -12px rgba(255,194,14,.9);animation:nb 2.4s ease-in-out infinite;transition:transform .4s}
+.nextbtn.end{transform:rotate(180deg);animation:none}
+@keyframes nb{50%{translate:0 6px}}
+.chap{display:inline-flex;align-items:center;gap:14px;margin-bottom:6px}
+.chap b{font-family:Poppins;font-weight:800;font-size:1rem;background:var(--y);color:var(--ink);width:44px;height:44px;border-radius:50%;display:grid;place-items:center}
+.chap span{font-size:.8rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.leadby{font-size:.85rem;color:var(--muted);line-height:1.35;align-self:center;padding-left:6px}
+.leadby b{color:var(--ink)}
+/* timeline */
+.tl{position:relative;margin-top:50px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.tl-line{position:absolute;left:0;right:0;top:30px;height:3px;background:var(--line)}
+.tl-line i{position:absolute;inset:0;background:var(--y);transform-origin:left;transform:scaleX(0);transition:transform 1.8s cubic-bezier(.2,.8,.2,1) .3s}
+.pg.active .tl-line i{transform:none}
+.tli{display:flex;flex-direction:column;gap:18px}
+.tld{width:62px;height:62px;border-radius:50%;background:var(--ink);display:grid;place-items:center;font-size:1.5rem;position:relative;z-index:2;box-shadow:0 0 0 8px #fff}
+.tlc{background:var(--mist);border-radius:var(--r);padding:26px 28px;transition:transform .4s,background .4s}
+.tlc:hover{transform:translateY(-6px);background:var(--y)}
+.tlc{flex:1}
+.tlc .yr{font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.tlc h3{font-size:1.6rem;margin:6px 0 8px}
+.tlc p{color:var(--muted)}
+.tlc:hover .yr,.tlc:hover p{color:var(--ink)}
+/* journey */
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:j}
+.js{border-radius:var(--r);padding:20px 22px;background:var(--mist);position:relative;transition:transform .4s,background .4s,color .4s}
+.js:hover{transform:translateY(-8px);background:var(--ink);color:#fff}
+.js:hover p{color:var(--muted2)}
+.jn{font-family:Poppins;font-weight:800;font-size:2.6rem;line-height:1;color:var(--y);-webkit-text-stroke:1.5px var(--ink)}
+.js:hover .jn{-webkit-text-stroke:0}
+.js h4{font-size:1.25rem;margin:16px 0 8px}
+.js p{color:var(--muted);font-size:.93rem}
+.js:not(:nth-child(4n))::after{content:"→";position:absolute;right:-16px;top:34px;font-weight:800;color:var(--y);font-size:1.2rem;z-index:2}
+/* models */
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;perspective:1200px}
+.md{background:#fff;border-radius:var(--r);padding:24px 26px;transition:transform .15s ease-out;border:1.5px solid var(--line)}
+.md.hot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.md .mtag{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--y);color:var(--ink);padding:5px 12px;border-radius:999px}
+.md h3{font-size:1.5rem;margin:14px 0 6px}
+.md p{color:var(--muted);margin-bottom:18px}
+.md.hot p{color:var(--muted2)}
+.md ul{list-style:none;display:grid;gap:10px}
+.md li{display:flex;gap:10px;font-weight:600;font-size:.95rem}
+.md li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;font-size:.7rem;font-weight:800}
+.monthly{margin-top:26px;background:var(--y);border-radius:var(--r);padding:26px 32px;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center}
+.monthly .chap b{background:var(--ink);color:var(--y)}
+.monthly ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.monthly li{background:#fff;padding:8px 16px;border-radius:999px;font-weight:700;font-size:.88rem}
+.opener .h2 em{color:var(--ink)}
+/* nav */
+nav{position:fixed;inset:14px 0 auto;z-index:60;pointer-events:none}
+nav .bar{pointer-events:auto;max-width:1220px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 14px 12px 26px;border-radius:999px;transition:background .35s,box-shadow .35s,backdrop-filter .35s}
+nav.solid .bar{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);box-shadow:0 10px 40px -18px rgba(30,31,42,.35)}
+nav .bar img{height:30px;width:auto}
+.links{display:flex;gap:30px;font-weight:600;font-size:.92rem}
+.links a{position:relative}
+.links a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--y);transition:width .3s}
+.links a:hover::after{width:100%}
+
+/* hero */
+.hero{min-height:100vh;padding:130px 0 60px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.ring{position:absolute;border-radius:50%;border:2px solid var(--line)}
+.r1{width:900px;height:900px;right:-260px;top:-140px}
+.r2{width:620px;height:620px;right:-120px;top:0}
+.ysun{position:absolute;width:520px;height:520px;border-radius:50%;background:var(--y);right:-80px;top:120px;filter:blur(0);opacity:.95;animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.06) translate(-14px,10px)}}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center;width:100%;position:relative;z-index:2}
+.hero h1{font-size:clamp(3rem,6.8vw,6.4rem);font-weight:700;margin:24px 0 26px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln > span{display:inline-block;transform:translateY(110%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}.hero h1 .ln:nth-child(3)>span{animation-delay:.24s}
+@keyframes up{to{transform:none}}
+.smile{display:inline-flex;align-items:center;gap:.06em;color:var(--ink)}
+.smile i{display:block;width:.17em;height:.17em;border-radius:50%;background:var(--y);animation:blink 4s infinite}
+.smile b{display:flex;flex-direction:column;justify-content:center;gap:.2em;height:.72em}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.hero p.lead{opacity:0;animation:fade .9s .55s forwards}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;opacity:0;animation:fade .9s .7s forwards}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.stage{position:relative;height:620px;perspective:1400px}
+#logo3d{position:absolute;inset:0;width:100%;height:100%}
+.logo-fallback{position:absolute;left:50%;top:50%;width:70%;transform:translate(-50%,-50%);display:none}
+.fly{position:absolute;width:150px;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(30,31,42,.45);transform-style:preserve-3d;transition:transform .2s ease-out;animation:bob 6s ease-in-out infinite}
+.fly img{width:100%}
+.f1{left:-2%;top:6%;--rz:-10deg}.f2{right:2%;top:2%;width:130px;--rz:8deg;animation-delay:-2s}.f3{left:4%;bottom:6%;width:140px;--rz:7deg;animation-delay:-4s}.f4{right:-2%;bottom:10%;width:160px;--rz:-6deg;animation-delay:-1s}
+@keyframes bob{50%{translate:0 -16px}}
+.scroll-cue{position:absolute;left:28px;bottom:26px;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:12px;z-index:3}
+.scroll-cue span{width:1.5px;height:44px;background:var(--ink);transform-origin:top;animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* marquee */
+.mq{background:var(--y);padding:22px 0;overflow:hidden;transform:rotate(-2deg);margin:-10px -20px 0;position:relative;z-index:5}
+.mq.b{background:var(--ink);color:#fff;transform:rotate(1.5deg);margin-top:-46px;z-index:4}
+.mq .tr{display:flex;width:max-content;animation:mq 36s linear infinite}
+.mq.b .tr{animation-direction:reverse}
+.mq span{font-family:Poppins;font-weight:800;font-size:clamp(1.4rem,2.6vw,2.2rem);white-space:nowrap;padding-right:44px;display:flex;align-items:center;gap:44px;text-transform:uppercase}
+.mq span::after{content:":D";font-size:.8em;color:var(--ink);background:#fff;border-radius:999px;padding:0 .35em}
+.mq.b span::after{background:var(--y)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(50px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.about p{color:var(--muted);font-size:1.08rem;margin-top:22px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{border-radius:var(--r);padding:28px;background:var(--mist);position:relative;overflow:hidden;transition:transform .4s}
+.stat:hover{transform:translateY(-6px) rotate(-1deg)}
+.stat b{font-family:Poppins;font-size:3.4rem;font-weight:800;display:block;line-height:1}
+.stat span{color:var(--muted);font-size:.95rem;display:block;margin-top:10px}
+.stat.yy{background:var(--y)}.stat.yy span{color:var(--ink)}
+.stat.kk{background:var(--ink);color:#fff}.stat.kk span{color:var(--muted2)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:90px}
+.mem{border-radius:var(--r);background:var(--mist);padding:30px 26px;display:flex;gap:20px;align-items:center;transition:background .3s,transform .4s}
+.mem:hover{background:var(--y);transform:translateY(-6px)}
+.mem img{width:86px;height:86px;border-radius:50%;object-fit:cover;border:3px solid #fff;flex:none}
+.mem h4{font-size:1.3rem}
+.mem p{color:var(--muted);font-weight:600;font-size:.9rem}
+.mem:hover p{color:var(--ink)}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(140px,19vh,200px);gap:14px}
+.bx{border-radius:var(--r);padding:28px;position:relative;overflow:hidden;background:var(--ink2);color:#fff;transform-style:preserve-3d;transition:transform .15s ease-out}
+.bx h3{font-size:1.45rem;margin-bottom:10px;position:relative;z-index:2}
+.bx p{color:var(--muted2);font-size:.95rem;position:relative;z-index:2;max-width:360px}
+.bx .num{position:absolute;right:22px;top:18px;font-family:Poppins;font-weight:800;font-size:.9rem;color:var(--muted2)}
+.bx.big{grid-column:span 2;grid-row:span 2;background:var(--y);color:var(--ink);display:flex;flex-direction:column;justify-content:flex-end}
+.bx.big .chips{position:static;margin-top:14px}
+.bx.big p{color:var(--ink);font-size:1.05rem}
+.bx.big .num{color:var(--ink)}
+.bx.wide{grid-column:span 2}
+.bx.lt{background:#fff;color:var(--ink)}.bx.lt p{color:var(--muted)}
+.bx .chips{position:absolute;left:28px;bottom:24px;display:flex;flex-wrap:wrap;gap:8px;z-index:2;right:28px}
+.bx .chips span{font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1)}
+.bx.big .chips span{background:rgba(30,31,42,.1)}
+.bx.lt .chips span{background:var(--mist)}
+.bx .deco{position:absolute;right:-40px;bottom:-40px;width:200px;height:200px;border-radius:50%;border:26px solid rgba(255,194,14,.18);transition:transform .6s}
+.bx:hover .deco{transform:scale(1.25) rotate(40deg)}
+.bx.big .deco{border-color:rgba(30,31,42,.12);width:340px;height:340px;right:-60px;bottom:-80px}
+.bx.big .bigD{position:absolute;right:30px;top:70px;font-family:Poppins;font-weight:800;font-size:9rem;line-height:1;opacity:.95}
+
+/* poster carousel 3D */
+.carousel{height:min(470px,52vh);perspective:1600px;position:relative;cursor:grab;user-select:none;touch-action:pan-y}
+.carousel:active{cursor:grabbing}
+.cring{position:absolute;left:50%;top:50%;width:220px;height:280px;margin:-140px 0 0 -110px;transform-style:preserve-3d}
+.cc{position:absolute;inset:0;border-radius:18px;overflow:hidden;backface-visibility:hidden;box-shadow:0 30px 50px -25px rgba(0,0,0,.7);background:#000}
+.cc img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cc figcaption{position:absolute;left:10px;bottom:10px;font-size:.72rem;font-weight:700;background:var(--y);color:var(--ink);padding:4px 10px;border-radius:999px}
+.floor{position:absolute;left:50%;bottom:20px;width:70%;height:60px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(255,194,14,.28),transparent 70%);filter:blur(10px)}
+.hint{text-align:center;color:var(--muted2);font-size:.85rem;margin-top:10px;font-weight:600}
+
+/* social phones */
+.social{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.phones{position:relative;height:min(640px,74vh);perspective:1600px}
+.phone{position:absolute;width:290px;height:590px;border-radius:46px;background:#111;padding:12px;box-shadow:0 60px 80px -40px rgba(30,31,42,.6),inset 0 0 0 2px #333;transform-style:preserve-3d;transition:transform .2s ease-out}
+.phone .scr{width:100%;height:100%;border-radius:36px;overflow:hidden;background:#fff;position:relative}
+.phone .notch{position:absolute;top:10px;left:50%;width:90px;height:24px;border-radius:20px;background:#111;transform:translateX(-50%);z-index:3}
+.ph1{left:6%;top:20px;transform:rotateY(18deg) rotateX(6deg) rotateZ(-4deg)}
+.ph2{left:44%;top:40px;transform:rotateY(-16deg) rotateX(6deg) rotateZ(5deg);z-index:2}
+.igh{display:flex;align-items:center;gap:10px;padding:44px 14px 10px;border-bottom:1px solid var(--line);font-size:.8rem;font-weight:700}
+.igh img{width:30px;height:30px;border-radius:50%;object-fit:contain;background:var(--ink);padding:5px}
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;animation:feed 22s linear infinite}
+.feed img{width:100%;aspect-ratio:1/1;object-fit:cover}
+@keyframes feed{to{transform:translateY(-50%)}}
+.post{padding:44px 0 0}
+.post .ph{display:flex;gap:8px;align-items:center;padding:0 12px 8px;font-size:.75rem;font-weight:700}
+.post .ph i{width:26px;height:26px;border-radius:50%;background:var(--y);display:inline-block}
+.post .pimg{position:relative;aspect-ratio:4/5;overflow:hidden}
+.post .pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s}
+.post .pimg img.on{opacity:1}
+.post .act{display:flex;gap:14px;padding:10px 12px;font-size:1.1rem}
+.post .likes{padding:0 12px;font-size:.75rem;font-weight:700}
+.heart{position:absolute;left:50%;top:50%;font-size:5rem;transform:translate(-50%,-50%) scale(0);z-index:2;opacity:0}
+.heart.pop{animation:pop 1s ease}
+@keyframes pop{30%{transform:translate(-50%,-50%) scale(1.2);opacity:1}60%{transform:translate(-50%,-50%) scale(1);opacity:1}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+.ticks{list-style:none;margin-top:30px;display:grid;gap:14px}
+.ticks li{display:flex;gap:14px;align-items:flex-start;font-weight:600}
+.ticks li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--y);display:grid;place-items:center;font-size:.8rem;font-weight:800}
+
+/* packaging coverflow */
+.flow{position:relative;height:440px;perspective:1400px;margin-top:10px}
+.fi{position:absolute;left:50%;top:50%;width:440px;height:300px;margin:-150px 0 0 -220px;border-radius:22px;overflow:hidden;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s,filter .8s;box-shadow:0 40px 60px -30px rgba(30,31,42,.5);cursor:pointer;background:#fff}
+.fi img{width:100%;height:100%;object-fit:cover}
+.fi .lbl{position:absolute;left:16px;bottom:16px;background:#fff;padding:6px 14px;border-radius:999px;font-weight:700;font-size:.8rem;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.fctl{display:flex;gap:12px;justify-content:center;margin-top:24px}
+.fctl button{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;font-size:1.2rem;cursor:pointer;transition:all .25s}
+.fctl button:hover{background:var(--ink);color:#fff}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.dots i{width:8px;height:8px;border-radius:99px;background:var(--line);transition:all .3s}
+.dots i.on{width:28px;background:var(--y)}
+
+/* branding/outdoor tilt grid */
+.tilt-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:repeat(2,clamp(150px,27vh,260px));gap:16px;perspective:1200px}
+.tc{border-radius:var(--r);overflow:hidden;position:relative;transform-style:preserve-3d;transition:transform .15s ease-out;cursor:zoom-in;background:#fff}
+.tc img{width:100%;height:100%;object-fit:cover}
+.tc .cap{position:absolute;left:16px;bottom:16px;background:var(--ink);color:#fff;padding:7px 14px;border-radius:999px;font-weight:700;font-size:.8rem;transform:translateZ(40px)}
+.tc.tall{grid-row:span 2}
+.tc.logos img{object-fit:contain;padding:10px;background:#fff}
+
+/* work */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.filters button{background:transparent;border:1.5px solid var(--ink3);color:var(--muted2);padding:10px 20px;border-radius:999px;font:inherit;font-weight:700;font-size:.88rem;cursor:pointer;transition:all .25s}
+.filters button.on,.filters button:hover{background:var(--y);color:var(--ink);border-color:var(--y)}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case{border-radius:var(--r);background:var(--ink2);padding:24px 26px;cursor:pointer;position:relative;overflow:hidden;min-height:0;display:flex;flex-direction:column;transition:transform .4s,background .4s}
+.case:hover{transform:translateY(-8px);background:var(--ink3)}
+.case.hide{display:none}
+.case .no{font-family:Poppins;font-weight:800;font-size:2.6rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--y);opacity:.9}
+.case h3{font-size:1.6rem;margin:18px 0 6px}
+.case .ind{color:var(--y);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.case p{color:var(--muted2);margin:12px 0 18px;font-size:.97rem;flex:1}
+.case .go{font-weight:700;display:flex;gap:10px;align-items:center}
+.case .go::after{content:"→";width:34px;height:34px;border-radius:50%;background:var(--y);color:var(--ink);display:grid;place-items:center;transition:transform .3s}
+.case:hover .go::after{transform:rotate(-45deg)}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(10,10,16,.7);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s}
+.modal.open{opacity:1;pointer-events:auto}
+.sheet{background:#fff;border-radius:30px;max-width:820px;width:100%;max-height:90vh;overflow:auto;transform:translateY(30px) scale(.96);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.modal.open .sheet{transform:none}
+.sheet .top{background:var(--y);padding:40px 40px 32px;position:relative}
+.sheet .top h3{font-size:2.6rem}
+.sheet .top .ind{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:none;background:var(--ink);color:#fff;font-size:1.1rem;cursor:pointer}
+.sheet .in{padding:32px 40px 40px;display:grid;gap:24px}
+.sheet h4{font-family:Manrope;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.sheet ul{list-style:none;display:grid;gap:10px}
+.sheet li{padding-left:26px;position:relative}
+.sheet li::before{content:"";position:absolute;left:0;top:.55em;width:11px;height:11px;border-radius:50%;background:var(--y)}
+.sheet .chips{display:flex;flex-wrap:wrap;gap:8px}
+.sheet .chips span{font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--mist)}
+
+/* clients */
+.cl-rows{display:grid;gap:16px;margin-top:10px}
+.cl-row{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.cl-track{display:flex;gap:16px;width:max-content;animation:mq 50s linear infinite}
+.cl-row:nth-child(2) .cl-track{animation-direction:reverse;animation-duration:58s}
+.cl-row:nth-child(3) .cl-track{animation-duration:44s}
+.cl{flex:none;padding:20px 30px;border-radius:18px;background:var(--mist);font-family:Poppins;font-weight:700;font-size:1.15rem;white-space:nowrap;display:flex;align-items:center;gap:12px;transition:background .3s,transform .3s}
+.cl small{font-family:Manrope;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cl:hover{background:var(--y);transform:translateY(-4px)}
+.cl:hover small{color:var(--ink)}
+.cl-rows:hover .cl-track{animation-play-state:paused}
+
+/* logo wall */
+.lwall{display:grid;grid-template-columns:repeat(8,1fr);gap:12px;margin-bottom:28px;perspective:1200px}
+.lw{aspect-ratio:1/1;cursor:pointer}
+.lwi{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.lw:hover .lwi,.lw.flip .lwi{transform:rotateY(180deg)}
+.lf,.lb2{position:absolute;inset:0;border-radius:var(--r);backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center}
+.lf{background:#fff;border:1.5px solid var(--line);box-shadow:0 20px 40px -28px rgba(30,31,42,.45);padding:12%}
+.lf img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+.lb2{background:var(--y);transform:rotateY(180deg);flex-direction:column;gap:8px;text-align:center;padding:18px}
+.lb2 small{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.lb2 b{font-family:Poppins;font-size:.95rem;line-height:1.15}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.st{border-radius:var(--r);padding:28px 22px;background:var(--ink2);position:relative;overflow:hidden;transition:transform .4s,background .4s}
+.st:hover{transform:translateY(-8px);background:var(--y);color:var(--ink)}
+.st .n{font-family:Poppins;font-weight:800;font-size:3rem;line-height:1;color:var(--y);transition:color .4s}
+.st:hover .n{color:var(--ink)}
+.st h4{font-size:1.3rem;margin:20px 0 8px}
+.st p{color:var(--muted2);font-size:.92rem;transition:color .4s}
+.st:hover p{color:var(--ink)}
+
+/* contact */
+.contact{text-align:center;overflow:hidden;padding:150px 0}
+.contact .bigsmile{font-family:Poppins;font-weight:800;font-size:clamp(7rem,20vw,16rem);line-height:.85;color:var(--y);display:inline-block;animation:tiltf 5s ease-in-out infinite}
+@keyframes tiltf{50%{transform:rotate(-8deg) scale(1.04)}}
+.contact h2{font-size:clamp(2.6rem,6vw,5.4rem);margin:10px 0 22px}
+.contact .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.addr{margin-top:28px;color:var(--muted2);font-size:.95rem}
+footer{background:var(--ink);color:var(--muted2);border-top:1px solid var(--ink3);padding:28px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+footer img{height:26px}
+
+.lb{position:fixed;inset:0;z-index:120;background:rgba(10,10,16,.92);display:flex;align-items:center;justify-content:center;padding:30px;opacity:0;pointer-events:none;transition:opacity .3s;cursor:zoom-out}
+.lb.open{opacity:1;pointer-events:auto}
+.lb img{max-width:100%;max-height:90vh;border-radius:16px;transform:scale(.92);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.lb.open img{transform:none}
+.cursor{position:fixed;width:16px;height:16px;border-radius:50%;background:var(--y);pointer-events:none;z-index:200;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .25s;mix-blend-mode:multiply}
+.cursor.big{width:70px;height:70px;opacity:.6}
+
+@media (max-width:980px){
+  .links{display:none}
+  .hero .wrap,.about,.social{grid-template-columns:1fr}
+  .stage{height:420px}
+  .fly{width:100px}.f2,.f3{width:90px}.f4{width:110px}
+  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
+  .bx{min-height:210px}
+  .bx.big,.bx.wide{grid-column:span 2}
+  .team,.work,.steps{grid-template-columns:1fr}
+  .tilt-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .tc{aspect-ratio:4/3}.tc.tall{grid-row:auto}
+  .phones{height:560px}
+  .phone{width:220px;height:450px;border-radius:36px}
+  .ph2{left:38%}
+  .fi{width:300px;height:210px;margin:-105px 0 0 -150px}
+  .flow{height:320px}
+  .carousel{height:440px}
+  section{padding:90px 0}
+  .cursor{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .ysun{width:300px;height:300px;top:auto;bottom:40px;right:-70px}
+  .r1,.r2{display:none}
+  .bx .chips{position:static;margin-top:18px}
+  .bx.big h3{margin-top:110px!important;font-size:1.8rem!important}
+  .bx.big .bigD{font-size:5.5rem;top:24px;right:24px}
+  .lwall{grid-template-columns:repeat(2,1fr);gap:12px}
+  .rail{display:none}
+  .chrome{inset:14px 16px auto}
+  .clogo{height:38px;padding:7px 12px}
+  .nextbtn{width:48px;height:48px;right:16px;bottom:16px}
+  .tl{grid-template-columns:1fr;gap:16px}
+  .tl-line{left:30px;right:auto;width:3px;top:0;bottom:0;height:auto}
+  .tl-line i{transform-origin:top;transform:scaleY(0)}
+  .tli{flex-direction:row;align-items:flex-start}
+  .tld{flex:none}
+  .founders,.studio{grid-template-columns:1fr}
+  .pinfo h3{font-size:1.3rem}
+  .studio{min-width:0}.st-info{min-width:0}
+  .fd{padding:24px}.fd-ph{width:84px;height:84px}.fd h3{font-size:1.6rem}
+  .st-stage{height:54vh;order:-1}
+  .pthumbs{grid-template-columns:repeat(7,1fr)}
+  .lwall{grid-template-columns:repeat(4,1fr)}
+  .track>.pg{padding:76px 0 70px!important;justify-content:flex-start}
+  .journey,.models{grid-template-columns:1fr}
+  .js::after{display:none}
+  .monthly{grid-template-columns:1fr}
+
+  .lb2 b{font-size:1.05rem}
+  .ph1{display:none}
+  .ph2{left:50%;margin-left:-110px;top:30px}
+  .phones{height:520px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1 .ln>span{transform:none}.hero p.lead,.hero .cta{opacity:1}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cur"></div>
+
+<div class="chrome">
+  <img class="clogo" id="clogo" src="img/logo-dark.png" alt="D Clicks">
+  <div class="pcount"><span id="pcur">01</span> / <span id="ptot">13</span></div>
+</div>
+<div class="pbar" id="pbar"></div>
+<div class="rail" id="rail"></div>
+<button class="nextbtn" id="nextbtn" aria-label="Next page">↓</button>
+
+<!-- HERO -->
+<header class="hero pg" id="top" data-title="Cover">
+  <div class="hero-bg"><div class="ring r1"></div><div class="ring r2"></div><div class="ysun"></div></div>
+  <div class="wrap">
+    <div>
+      <div class="tag"><span>Creative portfolio · 2026</span></div>
+      <h1><span class="ln"><span>We make</span></span><span class="ln"><span>brands</span></span><span class="ln"><span>smile <span class="smile"><b><i></i><i></i></b>D</span></span></span></h1>
+      <p class="lead">Thank you for taking a look. In the next few pages we'll walk you through who we are, how we work, the work we're proud of and the brands that trust us.</p>
+      <div class="cta"><a href="#story" class="btn">Begin the walkthrough →</a><span class="leadby">Leading with the perfect mix of<br><b>creativity &amp; strategy</b></span></div>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="logo3d"></canvas>
+      <img class="logo-fallback" id="logoFallback" src="img/logo-dark.png" alt="D Clicks logo">
+      <div class="fly f1" data-depth="40"><img src="img/s-mahalakshmi2.jpg" alt=""></div>
+      <div class="fly f2" data-depth="70"><img src="img/p-neo.jpg" alt=""></div>
+      <div class="fly f3" data-depth="55"><img src="img/s-noodles.jpg" alt=""></div>
+      <div class="fly f4" data-depth="30"><img src="img/lbl/em-papaya.jpg" alt=""></div>
+    </div>
+  </div>
+  
+</header>
+
+
+<!-- 01 STORY -->
+<section id="story" class="pg" data-title="Our story"><div class="wrap">
+  <div class="chap rv"><b>01</b><span>Our story</span></div>
+  <h2 class="h2 rv">From a design studio<br>to your <em>growth partner</em></h2>
+  <div class="tl" id="tl"><div class="tl-line"><i id="tlfill"></i></div></div>
+</div></section>
+
+<section id="about" class="pg" data-title="Who we are"><div class="wrap">
+  <div class="about">
+    <div class="rv">
+      <div class="chap"><b>01</b><span>Who we are</span></div>
+      <h2 class="h2">A growth consultant, <em>not just</em> an agency</h2>
+      <p>We do things differently, starting with a fresh market research approach. We sit down with you to understand what you want to achieve, then bring our experience, enthusiasm and imagination to the table.</p>
+      <p>The result is creative that looks great and works hard: tied to leads, footfall and sales, and built for how Tamil Nadu customers actually buy.</p>
+    </div>
+    <div class="stats">
+      <div class="stat yy rv"><b>70+</b><span>Brands served across Tamil Nadu</span></div>
+      <div class="stat kk rv d1"><b>15+</b><span>Industries, from jewellery to hospitals</span></div>
+      <div class="stat rv d2"><b>360°</b><span>Strategy, creative, ads and automation</span></div>
+      <div class="stat rv d3"><b>1</b><span>Team accountable for your growth</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="founders" class="pg dark" data-title="Founders"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>01</b><span>Meet the founders</span></div><h2 class="h2">Two founders, <em>one team</em></h2></div>
+    <p class="lead rv d1">One of us minds the numbers and the tech. The other minds your brand and your customers. Together, nothing falls through the cracks.</p>
+  </div>
+  <div class="founders" id="founderGrid"></div>
+  <p class="fquote rv">“Our innovative problem-solving skills help brands communicate and engage effectively with their audience. The secret ingredient behind our work is our collaborative approach.”</p>
+</div></section>
+
+<!-- SERVICES -->
+<section id="services" class="dark pg" data-title="What we do"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>02</b><span>What we do</span></div><h2 class="h2">Everything a brand<br>needs to <em>grow</em></h2></div>
+    <p class="lead rv d1">From the first logo sketch to the lead landing on your phone, one studio and one system.</p>
+  </div>
+  <div class="bento" id="bento">
+    <div class="bx big rv" data-tilt><span class="num">01</span><div class="bigD">:D</div><h3 style="font-size:2rem">Social media &amp; performance marketing</h3><p>Content calendars, reels, page management and Meta campaigns with pincode-level targeting, plus WhatsApp follow-up so no lead goes cold.</p><div class="chips"><span>Content</span><span>Meta ads</span><span>Lead gen</span><span>WhatsApp</span></div><div class="deco"></div></div>
+    <div class="bx rv d1" data-tilt><span class="num">02</span><h3>Graphic design</h3><p>Posters, brochures, hoardings and collateral.</p><div class="deco"></div></div>
+    <div class="bx lt rv d2" data-tilt><span class="num">03</span><h3>Branding</h3><p>Logos, identity and stationery that last.</p><div class="deco"></div></div>
+    <div class="bx lt rv" data-tilt><span class="num">04</span><h3>Packaging</h3><p>Boxes, pouches and bags that win the shelf.</p><div class="deco"></div></div>
+    <div class="bx rv d1" data-tilt><span class="num">05</span><h3>Video</h3><p>Reels, corporate films, 2D/3D and whiteboard animation.</p><div class="deco"></div></div>
+    <div class="bx wide rv" data-tilt><span class="num">06</span><h3>Strategy &amp; market research</h3><p>Fresh research, competitor audits and growth plans that turn insight into action.</p><div class="chips"><span>Audits</span><span>Competitor mapping</span><span>Growth plans</span></div><div class="deco"></div></div>
+    <div class="bx wide lt rv d1" data-tilt><span class="num">07</span><h3>Websites, apps &amp; automation</h3><p>Dynamic and e-commerce websites, mobile apps, CRM sync and lead alerts.</p><div class="chips"><span>Websites</span><span>Apps</span><span>CRM</span></div><div class="deco"></div></div>
+  </div>
+</div></section>
+
+<!-- 03 HOW WE WORK -->
+<section id="how" class="pg" data-title="How we work"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>03</b><span>How we work with you</span></div><h2 class="h2">Your journey <em>with us</em></h2></div>
+    <p class="lead rv d1">A clear, repeatable way of working, so you always know what's happening, what's next and what it's delivering.</p>
+  </div>
+  <div class="journey" id="journey"></div>
+</div></section>
+
+<section id="together" class="pg" data-title="Working together" style="background:var(--mist)"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>03</b><span>Ways to work together</span></div><h2 class="h2">Pick the way <em>that fits</em></h2></div>
+    <p class="lead rv d1">Whether you need a long-term growth partner or a single brilliant project, we shape the engagement around your goal.</p>
+  </div>
+  <div class="models" id="models"></div>
+  <div class="monthly rv">
+    <div><div class="chap" style="margin:0"><b>✓</b><span>Every month you get</span></div></div>
+    <ul id="monthly"></ul>
+  </div>
+</div></section>
+
+<!-- 04 SHOWCASE -->
+<section id="showcase" class="dark pg opener" data-title="Showcase"><div class="wrap">
+  <div class="chap rv"><b>04</b><span>Showcase</span></div>
+  <h2 class="h2 rv" style="font-size:clamp(3rem,9vw,8rem)">The work<br>we're <em>proud of</em></h2>
+  <p class="lead rv d1" style="margin-top:24px">Posters, social media, packaging, branding and outdoor, made for brands across Tamil Nadu.</p>
+</div>
+<div style="margin-top:70px"><div class="mq"><div class="tr" id="mq1"></div></div>
+<div class="mq b"><div class="tr" id="mq2"></div></div>
+</div>
+</section>
+
+<!-- POSTERS 3D CAROUSEL -->
+<section id="posters" class="dark pg" data-title="Posters"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>04</b><span>Creative posters</span></div><h2 class="h2">A <em>360°</em> wall of work</h2></div>
+    <p class="lead rv d1">Festive campaigns, product launches and awareness posters for brands across Tamil Nadu. Drag to spin, tap to view.</p>
+  </div>
+  <div class="carousel rv" id="carousel"><div class="cring" id="cring"></div><div class="floor"></div></div>
+  <p class="hint">← Drag to spin →</p>
+</div></section>
+
+<!-- SOCIAL -->
+<section id="social" class="pg" data-title="Social media"><div class="wrap social">
+  <div class="phones" id="phones">
+    <div class="phone ph1" data-base="rotateY(18deg) rotateX(6deg) rotateZ(-4deg)"><div class="scr"><div class="notch"></div>
+      <div class="igh"><img src="img/logo-light.png" alt="">dclicks.in</div>
+      <div style="overflow:hidden;height:calc(100% - 90px)"><div class="feed" id="feed"></div></div>
+    </div></div>
+    <div class="phone ph2" data-base="rotateY(-16deg) rotateX(6deg) rotateZ(5deg)"><div class="scr"><div class="notch"></div>
+      <div class="post"><div class="ph"><i></i>Brand page · Sponsored</div>
+        <div class="pimg" id="pimg"><div class="heart" id="heart">💛</div></div>
+        <div class="act">♡ 💬 ↗</div><div class="likes" id="likes">2,481 likes</div>
+      </div>
+    </div></div>
+  </div>
+  <div class="rv">
+    <div class="chap"><b>04</b><span>Social media</span></div>
+    <h2 class="h2">Feeds people <em>stop</em> scrolling for</h2>
+    <p class="lead" style="margin-top:20px">We plan, design and run social media that feels local, looks premium and sells: jewellery that shines, food you can almost taste, and offers families act on.</p>
+    <ul class="ticks">
+      <li>Monthly content calendars built around festivals and buying seasons</li>
+      <li>Posters, carousels and reels designed in your brand's voice</li>
+      <li>Ad creatives tested and refreshed to keep cost per lead down</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- PACKAGING STUDIO -->
+<section id="packaging" class="pg" data-title="Packaging 3D" style="background:var(--mist)"><div class="wrap studio">
+  <div class="st-info">
+    <div class="chap rv"><b>04</b><span>Packaging design</span></div>
+    <h2 class="h2 rv" style="font-size:clamp(2rem,3.6vw,3.2rem)">Labels that come <em>alive</em> in 3D</h2>
+    <div class="pinfo" id="pinfo"></div>
+    <div class="pthumbs" id="pthumbs"></div>
+  </div>
+  <div class="st-stage rv">
+    <canvas id="pk3d"></canvas>
+    <div class="st-hint">Drag to rotate · Tap a pack to switch</div>
+    <div class="st-nav"><button id="pkPrev" aria-label="Previous pack">←</button><span id="pkCount">01 / 13</span><button id="pkNext" aria-label="Next pack">→</button></div>
+  </div>
+</div></section>
+
+<section id="labels" class="pg" data-title="Label artwork"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>04</b><span>Label artwork</span></div><h2 class="h2">From flat label to <em>finished pack</em></h2></div>
+    <p class="lead rv d1">The print-ready artwork behind the packs: dielines, wrap labels and bottle labels. Tap any one to see it large.</p>
+  </div>
+  <div class="lgal" id="lgal"></div>
+</div></section>
+
+<!-- BRANDING + OUTDOOR -->
+<section id="branding" class="pg" data-title="Branding"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>04</b><span>Branding &amp; outdoor</span></div><h2 class="h2">From logo to <em>billboard</em></h2></div>
+    <p class="lead rv d1">Identities that carry into offices, stationery, standees and hoardings that own the street.</p>
+  </div>
+  <div class="tilt-grid" id="tiltGrid"></div>
+</div></section>
+
+<!-- CASE STUDIES -->
+<section id="work" class="dark pg" data-title="Case studies"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>05</b><span>Case studies</span></div><h2 class="h2">The brief, the idea, <em>the work</em></h2></div>
+    <p class="lead rv d1">Tap a project to see the story behind it.</p>
+  </div>
+  <div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="realestate">Real estate</button><button data-f="retail">Retail</button><button data-f="leads">Lead generation</button><button data-f="wellness">Wellness</button></div>
+  <div class="work" id="workGrid"></div>
+</div></section>
+
+<!-- CLIENTS -->
+<section id="clients" class="pg" data-title="Clients"><div class="wrap">
+  <div class="sec-head">
+    <div class="rv"><div class="chap"><b>06</b><span>Our cherished clients</span></div><h2 class="h2">Brands that <em>trust</em> D Clicks</h2></div>
+    <p class="lead rv d1">Jewellers, hospitals, restaurants, manufacturers, builders and more, across Tamil Nadu. Hover or tap a logo to flip it.</p>
+  </div>
+</div>
+<div class="wrap"><div class="lwall" id="lwall"></div></div>
+<div class="cl-rows" id="clRows"></div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section class="contact dark pg" id="contact" data-title="Thank you"><div class="wrap">
+  <div class="chap rv" style="justify-content:center"><b>07</b><span>Thank you</span></div>
+  <div class="bigsmile rv">:D</div>
+  <h2 class="rv d1">Thank you for your time.<br><span style="color:var(--y)">Let's create something together.</span></h2>
+  <p class="lead rv d2" style="margin:0 auto">Share your growth goal with us. We'll come back with the idea, the creative and a plan to make it work. A call or a WhatsApp is all it takes to begin.</p>
+  <div class="cta rv d3"><a class="btn y" href="https://wa.me/919600200920" target="_blank" rel="noopener">💬 WhatsApp us</a><a class="btn o" href="tel:+919600200920">📞 +91 96002 00920</a><a class="btn o" href="mailto:info@dclicks.in">✉ info@dclicks.in</a><a class="btn o" href="https://www.dclicks.in" target="_blank" rel="noopener">🌐 www.dclicks.in</a></div>
+  <p class="addr rv">📍 No. 11/4, Pooja Garden, Kalapatti Main Rd, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014</p>
+  <p class="addr rv" style="margin-top:10px;font-size:.8rem">© 2026 D Clicks Branding Solutions Private Limited</p>
+</div></section>
+
+
+
+<div class="lb" id="lb"><img alt=""></div>
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+
+<script src="js/three.min.js"></script>
+<script>
+/* =========================================================
+   CONTENT — edit this block to change the portfolio.
+   Images live in the img/ folder; just swap file names.
+   ========================================================= */
+const CONTENT = {
+  founders: [
+    { name:"Gopinath", role:"Co-Founder", focus:"Finance & Technology", photo:"img/t-gopinath.jpg",
+      text:"Gopinath looks after the business and the technology behind every campaign: budgets and billing, ad accounts and tracking, automation, and the lead tools that make sure no enquiry is ever missed. If it needs to add up or plug in, it goes through him.",
+      tags:["Finance","Technology","Automation","Lead systems"] },
+    { name:"Sugumar", role:"Co-Founder", focus:"Social Media Marketing & Client Relationships", photo:"img/t-sugumar.jpg",
+      text:"Sugumar leads social media marketing and stays close to every client: shaping content plans, guiding campaigns and making sure each brand feels heard, looked after and growing. He is the voice our clients call first.",
+      tags:["Social media","Campaigns","Content","Client relationships"] },
+  ],
+  posters: [
+    ["img/s-mahalakshmi2.jpg","Jewellery"],["img/p-neo.jpg","Festive offer"],["img/s-noodles.jpg","Restaurant"],["img/p-kmch.jpg","Healthcare"],
+    ["img/s-singapore.jpg","Travel"],["img/p-colourland.jpg","Retail"],["img/s-haribhavanam.jpg","Restaurant"],["img/p-avarika.jpg","Wellness"],
+    ["img/s-yaseen.jpg","Food"],["img/p-carpro.jpg","Festive"],["img/s-mahalakshmi1.jpg","Jewellery"],["img/p-lotus.jpg","Healthcare"],
+    ["img/s-rudra.jpg","FMCG"],["img/p-elmer.jpg","Festive"],["img/p-transze.jpg","Awareness"],["img/p-accurate.jpg","Festive"],
+  ],
+  social: ["img/s-mahalakshmi2.jpg","img/s-noodles.jpg","img/p-neo.jpg","img/s-haribhavanam.jpg","img/p-avarika.jpg","img/s-yaseen.jpg","img/p-kmch.jpg","img/s-rudra.jpg","img/p-colourland.jpg","img/s-mahalakshmi1.jpg","img/p-elmer.jpg","img/s-singapore.jpg"],
+  mockups: [
+    { name:"Anti-Dandruff Shampoo", brand:"Induveraa", kind:"Carton box", type:"box", dims:[1,3,.98], tex:{front:"anti-front",back:"anti-back",left:"anti-left",right:"anti-right",top:"anti-top",bottom:"anti-top"}, desc:"5X power with neem, tea tree, aloe vera, fenugreek and rosemary. A clean teal look that feels fresh and trustworthy." },
+    { name:"Herbal Shampoo · Anti Hairfall", brand:"Induveraa", kind:"Carton box", type:"box", dims:[1,3,.98], tex:{front:"herbal-front",back:"herbal-back",left:"herbal-left",right:"herbal-right",top:"herbal-top",bottom:"herbal-top"}, desc:"Wine and gold with real botanicals (onion, hibiscus, amla and rosemary) to tell the herbal story at a glance." },
+    { name:"Brightening Cream", brand:"Induveraa", kind:"Carton box", type:"box", dims:[1.6,1.05,1.55], tex:{front:"cream-front",back:"cream-back",left:"cream-left",right:"cream-right",top:"cream-top",bottom:"cream-top"}, desc:"Deep green with a gold frame and a milk-splash visual, built for a premium skincare shelf." },
+    { name:"Glutathione + Rose Petals Soap", brand:"Induveraa", kind:"Soap carton", type:"box", dims:[2.6,1.75,.88], tex:{front:"gluta-front",back:"gluta-back",left:"gluta-left",right:"gluta-right",top:"gluta-top",bottom:"gluta-bottom"}, desc:"Bright pink with glossy rose bubbles, designed to pop on a crowded counter." },
+    { name:"Kojic Acid + Rice Powder Soap", brand:"Induveraa", kind:"Soap carton", type:"box", dims:[2.6,1.75,.88], tex:{front:"kojic-front",back:"kojic-back",left:"kojic-left",right:"kojic-right",top:"kojic-top",bottom:"kojic-bottom"}, desc:"Olive and gold with rice-field imagery that explains the ingredients before you read a word." },
+    { name:"Multifloral Raw Honey", brand:"Vasthra's", kind:"Jar label", type:"jar", label:"honey-multi", face:.47, honey:0xa8540a, desc:"Hand-drawn florals and a script tagline: “Nature's Sweetest Blend, Bottled Just For You!”" },
+    { name:"Jamun Raw Honey", brand:"Vasthra's", kind:"Jar label", type:"jar", label:"honey-jamun", face:.47, honey:0x5e2a08, desc:"A purple jamun botanical with “A Drop of Honey, A Bite of Jamun, Pure Bliss!”" },
+    { name:"Moringa Raw Honey", brand:"Vasthra's", kind:"Jar label", type:"jar", label:"honey-moringa", face:.47, honey:0x9a5a10, desc:"Fresh moringa leaves for a single-origin, earthy story with gut-health cues." },
+    { name:"Black Pepper", brand:"Vasthra's", kind:"Stand-up pouch", type:"pouch", w:2, h:2.94, front:"pepper-front", back:"pepper-back", desc:"A premium monochrome look with Attapadi origin and a “100% Natural” badge." },
+    { name:"Multigrain Fruit Muesli", brand:"Inspira", kind:"Stand-up pouch", type:"pouch", w:1.95, h:2.92, front:"muesli-front", backColor:0x22397f, desc:"Bold teal, navy and peach with spirulina and prebiotic-fibre call-outs." },
+    { name:"Premium Ooty Whole Wheat Bread", brand:"Inithu Inithu", kind:"Bread bag", type:"bag", dims:[1.25,2.85,1.25], tex:{front:"bread-front",back:"bread-back",left:"bread-left",right:"bread-right",top:"bread-top"}, desc:"Warm bakery browns and a bilingual Tamil and English story built on Ooty heritage." },
+    { name:"Premium Ooty Rusk", brand:"Inithu Inithu", kind:"Pack wrap", type:"box", dims:[2.2,2.56,.61], tex:{front:"rusk-front",back:"rusk-back",left:"rusk-left",right:"rusk-right",top:"rusk-top",bottom:"rusk-top"}, desc:"Royal purple with tea-time imagery: “Perfect snacks for dipping in your tea time.”" },
+    { name:"Natural Hair Oil", brand:"Emily Naturals", kind:"Bottle label", type:"bottle", front:"oil-front.png", back:"oil-back.png", desc:"An arched wine-and-gold label with a hand-drawn herbal mortar." },
+  ],
+  labels: [
+    ["img/lbl/em-coconut.jpg","Emily · Coconut Milk Shampoo"],["img/lbl/l-anti.jpg","Induveraa · Anti-Dandruff box"],["img/lbl/l-honey-multi.jpg","Vasthra's · Multifloral honey"],
+    ["img/lbl/l-muesli.jpg","Inspira · Muesli pouch"],["img/lbl/em-goat.jpg","Emily · Goat Milk Facewash"],["img/lbl/l-gluta.jpg","Induveraa · Glutathione soap"],
+    ["img/lbl/l-pepper.jpg","Vasthra's · Black Pepper"],["img/lbl/l-rusk.jpg","Inithu Inithu · Ooty Rusk"],["img/lbl/l-herbal.jpg","Induveraa · Herbal Shampoo box"],
+    ["img/lbl/em-papaya.jpg","Emily · Papaya Facewash"],["img/lbl/l-oil.jpg","Emily · Natural Hair Oil"],["img/lbl/l-honey-jamun.jpg","Vasthra's · Jamun honey"],
+    ["img/lbl/l-cream.jpg","Induveraa · Brightening Cream box"],["img/lbl/l-bread.jpg","Inithu Inithu · Whole Wheat Bread"],["img/lbl/l-kojic.jpg","Induveraa · Kojic soap"],
+    ["img/lbl/l-honey-moringa.jpg","Vasthra's · Moringa honey"],["img/lbl/l-pepper-back.jpg","Vasthra's · Black Pepper (back)"],
+  ],
+  branding: [
+    { img:"img/h-billboard.jpg", cap:"Hoarding" , cls:"" },
+    { img:"img/logos.jpg", cap:"Logo design", cls:"logos" },
+    { img:"img/h-stand.jpg", cap:"Standee", cls:"tall" },
+    { img:"img/logo-mockups.jpg", cap:"Brand identity", cls:"" },
+    { img:"img/h-flex.jpg", cap:"Flex banner", cls:"" },
+  ],
+  story: [
+    { year:"", title:"Where it began", text:"D Clicks started as a creative design studio in Coimbatore, making logos, posters, brochures, packaging and videos for local brands that wanted to look as good as the big names.", icon:"✏️" },
+    { year:"", title:"Growing with our clients", text:"Jewellers, hospitals, restaurants, manufacturers and travel brands kept coming back. Our work grew from single designs to hoardings, websites, apps and full brand identities.", icon:"🌱" },
+    { year:"", title:"From design to growth", text:"Clients wanted more than good looks; they wanted enquiries. So we added Meta ads, lead generation and WhatsApp follow-up, and started measuring creative by the results it brings.", icon:"🎯" },
+    { year:"", title:"Today: your growth consultant", text:"Strategy first, research-led, with creative and automation working as one system, and our own lead tools so our clients never miss an enquiry.", icon:"🚀" },
+  ],
+  journey: [
+    ["Discovery call","We listen: your business, your customers, your goals and what has or hasn't worked before."],
+    ["Fresh market research","We study your market, competitors and how your customers actually buy."],
+    ["Strategy & proposal","A clear growth plan: audience, offer, channels, content and how we'll measure success."],
+    ["Onboarding","Brand kit, page and ad account access, a WhatsApp group and one point of contact."],
+    ["Content calendar","A monthly plan built around your festivals, offers and buying seasons, approved by you."],
+    ["Create & shoot","Posters, reels, ads and videos designed in your brand's voice and language."],
+    ["Launch & run ads","Targeted Meta campaigns with leads routed straight to your team on WhatsApp."],
+    ["Report & grow","Regular updates and a monthly review: what worked, what we'll change, what's next."],
+  ],
+  models: [
+    { tag:"Most popular", title:"Growth partnership", text:"A monthly retainer where we run your brand's growth end to end.", items:["Strategy & monthly content calendar","Social media design, reels & page management","Meta ads, lead generation & WhatsApp follow-up","Monthly growth review"] },
+    { tag:"One-time", title:"Brand & design projects", text:"A focused project with a clear brief and a finished deliverable.", items:["Logo & brand identity","Packaging design","Brochures, hoardings & collateral","Websites & corporate videos"] },
+    { tag:"Seasonal", title:"Launch & campaign sprints", text:"A short, high-energy push for a moment that matters.", items:["Store openings & product launches","Festive campaigns: Deepavali, Pongal & more","Offer & lucky-draw campaigns","Influencer tie-ups"] },
+  ],
+  monthly: ["A content calendar you approve before anything goes live","Designs and reels made in your brand's voice","Campaigns set up, watched and tuned","Leads delivered to your team on WhatsApp","A clear update on what worked and what's next"],
+  featuredClients: [
+    { name:"SMJ Gold & Diamonds", cat:"Jewellery", logo:"img/cl-smj.jpg" },
+    { name:"Chennai Rice", cat:"Food", logo:"img/cl-chennai-rice.jpg" },
+    { name:"Inspira", cat:"Food", logo:"img/cl-inspira.jpg" },
+    { name:"Mangai Nighties", cat:"Garments", logo:"img/cl-mangai.jpg" },
+    { name:"Kids Corner", cat:"Garments", logo:"img/cl-kids-corner.jpg" },
+    { name:"Mitahara Cafe", cat:"Restaurant", logo:"img/cl-mitahara.jpg" },
+    { name:"Aasife & Brothers Biriyani", cat:"Restaurant", logo:"img/cl-aasife.jpg" },
+    { name:"Bamboo Events", cat:"Events", logo:"img/cl-bamboo.jpg" },
+  ],
+  clients: [
+    ["SMJ Gold & Diamonds","Jewellery"],["Induveraa","Cosmetics"],["Vasthra's","Farm produce"],["Emily Beauty Care","Cosmetics"],["Inithu Inithu","Bakery"],["Chennai Rice","Food"],["Inspira","Food"],["Mitahara Cafe","Restaurant"],["Aasife & Brothers Biriyani","Restaurant"],["Mangai Nighties","Garments"],["Kids Corner","Garments"],["Bamboo Events","Events"],
+    ["Mahalakshmi Jewellery","Jewellery"],["Kanakalakshmi Diamonds","Jewellery"],["Hari Bhavanam","Restaurant"],["Madras Pongal","Restaurant"],["Grill & Dosa","Restaurant"],["Yari","Restaurant"],["Saastha","Food"],["Delish","Food"],["The London Shakes","Food"],["Yaseen Meat Centre","Food"],["Rudra Oil","Food"],
+    ["KMCH","Hospital"],["Lotus Hospitals","Hospital"],["Radmagic","Diagnostics"],["Medtex","Medical"],["Avarika Ayurvedic","Wellness"],["Lemon Pharmacy","Pharmacy"],["Metabo","Medical"],["Nippon Paint","Paints"],["Accurate","Manufacturing"],["Airwa","Manufacturing"],["Elmech Automations","Manufacturing"],
+    ["Innoteck","Pumps"],["Supertech","Pumps"],["Ellem","Manufacturing"],["Elmer","Manufacturing"],["Smart RO","Manufacturing"],["Asian Roofing","Construction"],["Sun","Construction"],["KJ Roofing","Construction"],["Harrish Events","Events"],["Axanday Entertainment","Events"],["Vivantha","Events"],
+    ["Prozone","Events"],["Colour Land Clothing","Garments"],["D Benz Garb","Garments"],["Swift Merchandise","Garments"],["SP Holidays","Travel"],["Make n Fun Tours","Travel"],["Ace & Turas","Travel"],["Effitrac","IT"],["Vinz Technologies","IT"],["SBCS","Auditors"],["Nissarc","Education"],["Car Pro","Automotive"],["Transze","EV"],["Kick Tonic","Beverage"],["SpringZone","Mattress"],["Pin-Wall","Building"],
+  ],
+  cases: [
+    {client:"Nippon Paints",ind:"Paints · Regional lead generation",cat:["leads"],
+      idea:"Hyper-local creative for each pincode cluster, so every ad speaks to the town it runs in.",
+      brief:"Generate qualified painting-service leads for specific store catchments in Kerala and Tamil Nadu, on a pay-for-qualified-leads model.",
+      did:["Pincode-cluster campaigns across Trivandrum, Kumbakonam, Nagapattinam, Trichy and Tanjore","Lead-form creatives built around real home-painting moments","Lead-quality feedback from the client's own reports sent back to Meta","Daily campaign monitoring through the D Clicks lead app"],chips:["Meta lead ads","Geo-targeting","Conversions API"]},
+    {client:"Pondy Bazaar",ind:"Value fashion retail · Villupuram",cat:["retail"],
+      idea:"A reopening + Deepavali story with a lucky-draw hook that gives families a reason to visit now.",
+      brief:"Announce the new store and turn the reopening into a Deepavali crowd-puller for boys, girls and kids wear.",
+      did:["Reopening and festive creative series for social media and Meta ads","Lucky-draw offer campaign linking online buzz to in-store footfall","A full digital strategy across content, organic growth, paid and web"],chips:["Festive campaign","Meta ads","Offer creative"]},
+    {client:"Bhoomiya Projects",ind:"Real estate · Homes & plots",cat:["realestate","leads"],
+      idea:"Two creative tracks — lifestyle for homes, investment value for plots — plus an employer-brand campaign.",
+      brief:"Run separate demand engines for ready homes and for plots, and support the client's team hiring.",
+      did:["Dedicated Meta campaigns and creatives for homes and for plots","Facebook and Instagram hiring campaign with lead forms","Every lead routed into the D Clicks lead app for fast follow-up"],chips:["Meta ads","Lead forms","Hiring"]},
+    {client:"Thyself Bach Flower",ind:"Wellness education · Courses",cat:["wellness"],
+      idea:"Start warm: a paid webinar that lets people experience the teacher, then invite them straight into Level 1.",
+      brief:"Grow enrolments for Bach flower therapy courses taught in batches through an online learning platform.",
+      did:["Webinar-first funnel that moves attendees into the Level 1 course","Teacher-led video ad content in the founder's own voice","Separate growth tracks for teaching and for the clinic"],chips:["Webinar funnel","Video ads","Strategy"]},
+    {client:"First Key Developers",ind:"Real estate · Coimbatore",cat:["realestate","leads"],
+      idea:"An always-on system: content that builds trust, ads that create enquiries, WhatsApp that answers instantly.",
+      brief:"Stand out against established Coimbatore developers and convert enquiries faster.",
+      did:["Content planning and Meta ads management on retainer","WhatsApp automation connected to the client's existing CRM","Property portal listing management alongside social"],chips:["Content","Meta ads","WhatsApp automation"]},
+    {client:"Shruti Silks",ind:"Saree retail",cat:["retail"],
+      idea:"A growth and automation audit that shows the gaps and the next creative moves, in plain business terms.",
+      brief:"Understand where digital growth was being left on the table and what automation could add.",
+      did:["Digital growth and automation audit presentation","Content and campaign opportunities mapped to the saree buying calendar","Invited back by the client for a follow-up engagement"],chips:["Audit","Automation","Content strategy"]},
+  ],
+  marquee1: ["Social media","Branding","Packaging","Video","Meta ads","Websites"],
+  marquee2: ["Strategy","Posters","Hoardings","Reels","WhatsApp","Logos"],
+};
+/* ========================================================= */
+
+const $=s=>document.querySelector(s);
+const fine=matchMedia("(pointer:fine)").matches;
+
+// marquees
+const mk=(arr)=>{const h=arr.map(t=>`<span>${t}</span>`).join("");return h+h};
+$("#mq1").innerHTML=mk(CONTENT.marquee1); $("#mq2").innerHTML=mk(CONTENT.marquee2);
+
+// team
+$("#founderGrid").innerHTML=CONTENT.founders.map((f,i)=>`<article class="fd rv d${i}" data-tilt><div class="fd-top"><div class="fd-ph"><img src="${f.photo}" alt="${f.name}"></div><div><span class="fd-role">${f.role}</span><h3>${f.name}</h3><div class="fd-focus">${f.focus}</div></div></div><p>${f.text}</p><div class="fd-tags">${f.tags.map(t=>`<span>${t}</span>`).join("")}</div></article>`).join("");
+
+// story timeline
+$("#tl").insertAdjacentHTML("beforeend",CONTENT.story.map((m,i)=>`<div class="tli rv ${i%2?'r':'l'}"><div class="tld">${m.icon}</div><div class="tlc">${m.year?`<span class="yr">${m.year}</span>`:`<span class="yr">Chapter ${i+1}</span>`}<h3>${m.title}</h3><p>${m.text}</p></div></div>`).join(""));
+// journey
+$("#journey").innerHTML=CONTENT.journey.map(([h,t],i)=>`<div class="js rv d${i%4}"><div class="jn">${String(i+1).padStart(2,"0")}</div><h4>${h}</h4><p>${t}</p></div>`).join("");
+// models
+$("#models").innerHTML=CONTENT.models.map((m,i)=>`<div class="md rv d${i} ${i===0?'hot':''}" data-tilt><span class="mtag">${m.tag}</span><h3>${m.title}</h3><p>${m.text}</p><ul>${m.items.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+$("#monthly").innerHTML=CONTENT.monthly.map(x=>`<li>${x}</li>`).join("");
+// lightbox
+const lb=$("#lb");
+const openLB=src=>{lb.querySelector("img").src=src;lb.classList.add("open")};
+lb.onclick=()=>lb.classList.remove("open");
+
+// poster 3D ring
+const ring=$("#cring"), N=CONTENT.posters.length;
+const W=innerWidth<980?160:220, R=Math.round((W+26)/(2*Math.tan(Math.PI/N)));
+if(innerWidth<980){ring.style.width="160px";ring.style.height="205px";ring.style.margin="-102px 0 0 -80px"}
+CONTENT.posters.forEach(([src,cap],i)=>{const f=document.createElement("figure");f.className="cc";f.style.transform=`rotateY(${i*360/N}deg) translateZ(${R}px)`;f.innerHTML=`<img src="${src}" alt="${cap} poster by D Clicks" loading="lazy"><figcaption>${cap}</figcaption>`;f.dataset.src=src;ring.appendChild(f)});
+let ang=0,vel=-.12,drag=false,lastX=0,moved=0;
+const car=$("#carousel");
+car.addEventListener("pointerdown",e=>{drag=true;lastX=e.clientX;moved=0;car.setPointerCapture(e.pointerId)});
+car.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-lastX;lastX=e.clientX;moved+=Math.abs(dx);vel=dx*.25;ang+=dx*.25});
+car.addEventListener("pointerup",e=>{drag=false;if(moved<6){const el=document.elementFromPoint(e.clientX,e.clientY);const f=el&&el.closest(".cc");if(f)openLB(f.dataset.src)}});
+(function spin(){if(!drag){vel+=(-.12-vel)*.02;ang+=vel}ring.style.transform=`translateZ(${-R}px) rotateX(-6deg) rotateY(${ang}deg)`;requestAnimationFrame(spin)})();
+
+// social phones
+const feed=$("#feed"), soc=CONTENT.social; feed.innerHTML=[...soc,...soc].map(s=>`<img src="${s}" alt="" loading="lazy">`).join("");
+const pimg=$("#pimg"); soc.forEach((s,i)=>{const im=document.createElement("img");im.src=s;im.alt="";if(!i)im.className="on";pimg.appendChild(im)});
+let pi=0,likes=2481;
+setInterval(()=>{const ims=pimg.querySelectorAll("img");ims[pi].classList.remove("on");pi=(pi+1)%ims.length;ims[pi].classList.add("on");
+  const h=$("#heart");h.classList.remove("pop");void h.offsetWidth;h.classList.add("pop");likes+=Math.floor(Math.random()*300+80);$("#likes").textContent=likes.toLocaleString("en-IN")+" likes"},2600);
+const phones=$("#phones");
+if(fine) phones.addEventListener("pointermove",e=>{const r=phones.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  phones.querySelectorAll(".phone").forEach(p=>p.style.transform=`${p.dataset.base} rotateY(${x*14}deg) rotateX(${-y*10}deg)`)});
+phones.addEventListener("pointerleave",()=>phones.querySelectorAll(".phone").forEach(p=>p.style.transform=p.dataset.base));
+
+// label gallery
+$("#lgal").innerHTML=CONTENT.labels.map(([src,cap],i)=>`<figure class="lg rv d${i%4}" data-src="${src}"><img src="${src}" alt="${cap}" loading="lazy"><figcaption>${cap}</figcaption></figure>`).join("");
+document.querySelectorAll(".lg").forEach(f=>f.addEventListener("click",()=>openLB(f.dataset.src)));
+
+// branding tilt grid
+$("#tiltGrid").innerHTML=CONTENT.branding.map((b,i)=>`<div class="tc ${b.cls} rv d${i%3}" data-tilt data-src="${b.img}"><img src="${b.img}" alt="${b.cap}" loading="lazy"><span class="cap">${b.cap}</span></div>`).join("");
+document.querySelectorAll(".tc").forEach(t=>t.addEventListener("click",()=>openLB(t.dataset.src)));
+
+// tilt
+if(fine) document.querySelectorAll("[data-tilt]").forEach(el=>{
+  el.addEventListener("pointermove",e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(900px) rotateY(${x*12}deg) rotateX(${-y*12}deg) scale(1.02)`});
+  el.addEventListener("pointerleave",()=>el.style.transform="")});
+
+// cases
+const wg=$("#workGrid");
+CONTENT.cases.forEach((k,i)=>{const el=document.createElement("article");el.className="case rv d"+(i%3);el.dataset.cat=k.cat.join(" ");
+  el.innerHTML=`<div class="no">0${i+1}</div><h3>${k.client}</h3><div class="ind">${k.ind}</div><p>${k.idea}</p><span class="go">View case</span>`;el.onclick=()=>openCase(k);wg.appendChild(el)});
+$("#filters").addEventListener("click",e=>{if(e.target.tagName!=="BUTTON")return;document.querySelectorAll("#filters button").forEach(b=>b.classList.remove("on"));e.target.classList.add("on");const f=e.target.dataset.f;document.querySelectorAll(".case").forEach(c=>c.classList.toggle("hide",f!=="all"&&!c.dataset.cat.includes(f)))});
+const modal=$("#modal"),sheet=$("#sheet");
+function openCase(k){sheet.innerHTML=`<div class="top"><button class="close" aria-label="Close">✕</button><div class="ind">${k.ind}</div><h3>${k.client}</h3></div><div class="in"><div><h4>The brief</h4><p>${k.brief}</p></div><div><h4>The idea</h4><p style="font-size:1.15rem;font-weight:600">${k.idea}</p></div><div><h4>What we created</h4><ul>${k.did.map(d=>`<li>${d}</li>`).join("")}</ul></div><div class="chips">${k.chips.map(c=>`<span>${c}</span>`).join("")}</div></div>`;modal.classList.add("open");sheet.querySelector(".close").onclick=()=>modal.classList.remove("open")}
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){modal.classList.remove("open");lb.classList.remove("open")}});
+
+// featured logo wall (3D flip)
+$("#lwall").innerHTML=CONTENT.featuredClients.map((c,i)=>`<div class="lw rv d${i%4}"><div class="lwi"><div class="lf"><img src="${c.logo}" alt="${c.name} logo" loading="lazy"></div><div class="lb2"><small>${c.cat}</small><b>${c.name}</b></div></div></div>`).join("");
+document.querySelectorAll(".lw").forEach(w=>w.addEventListener("click",()=>w.classList.toggle("flip")));
+// clients rows
+const C=CONTENT.clients, per=Math.ceil(C.length/3);
+$("#clRows").innerHTML=[0,1,2].map(r=>{const items=C.slice(r*per,(r+1)*per).map(([n,c])=>`<div class="cl">${n}<small>${c}</small></div>`).join("");return `<div class="cl-row"><div class="cl-track">${items}${items}</div></div>`}).join("");
+
+// reveal
+
+
+// ===== DECK: section by section =====
+const pages=[...document.querySelectorAll(".pg")];
+const deck=document.createElement("div");deck.className="deck";const track=document.createElement("div");track.className="track";deck.appendChild(track);
+pages[0].before(deck);pages.forEach(p=>track.appendChild(p));
+$("#ptot").textContent=String(pages.length).padStart(2,"0");
+$("#rail").innerHTML=pages.map((p,i)=>`<a href="#${p.id}" data-i="${i}"><span>${p.dataset.title}</span><i></i></a>`).join("");
+const railA=[...document.querySelectorAll("#rail a")];
+let curI=-1,locked=false;
+function goTo(i,instant){i=Math.max(0,Math.min(pages.length-1,i));if(i===curI)return;curI=i;
+  if(instant)track.style.transition="none";
+  track.style.transform=`translate3d(0,${-i*100}%,0)`;
+  if(instant){void track.offsetHeight;track.style.transition=""}
+  pages.forEach((p,k)=>p.classList.toggle("active",k===i));
+  const pg=pages[i];pg.scrollTop=0;pg.querySelectorAll(".rv").forEach(el=>el.classList.add("in"));
+  $("#pcur").textContent=String(i+1).padStart(2,"0");railA.forEach((a,k)=>a.classList.toggle("on",k===i));
+  $("#pbar").style.transform=`scaleX(${(i+1)/pages.length})`;
+  const dark=pg.classList.contains("dark");document.body.classList.toggle("ondark",dark);$("#clogo").src=dark?"img/logo-light.png":"img/logo-dark.png";
+  $("#nextbtn").classList.toggle("end",i===pages.length-1);
+  try{history.replaceState(null,"","#"+pg.id)}catch(e){}
+  window.dispatchEvent(new CustomEvent("pagechange",{detail:pg.id}));
+  locked=true;setTimeout(()=>locked=false,instant?50:950);}
+const next=()=>goTo(curI+1), prev=()=>goTo(curI-1);
+function canScroll(dir){const p=pages[curI];if(p.scrollHeight<=p.clientHeight+4)return false;return dir>0?p.scrollTop+p.clientHeight<p.scrollHeight-4:p.scrollTop>4}
+let wheelAcc=0,wheelT=0;
+deck.addEventListener("wheel",e=>{if(modal.classList.contains("open")||lb.classList.contains("open"))return;
+  const dir=Math.sign(e.deltaY);if(!dir)return;
+  if(canScroll(dir))return; e.preventDefault();
+  if(locked)return; const now=Date.now(); if(now-wheelT>250)wheelAcc=0; wheelT=now; wheelAcc+=e.deltaY;
+  if(Math.abs(wheelAcc)>40){wheelAcc=0;dir>0?next():prev()}},{passive:false});
+let ty=null,tx=null;
+deck.addEventListener("touchstart",e=>{ty=e.touches[0].clientY;tx=e.touches[0].clientX},{passive:true});
+deck.addEventListener("touchend",e=>{if(ty===null)return;const dy=ty-e.changedTouches[0].clientY,dx=tx-e.changedTouches[0].clientX;ty=null;
+  if(Math.abs(dy)<60||Math.abs(dx)>Math.abs(dy)||locked)return;const dir=Math.sign(dy);if(canScroll(dir))return;dir>0?next():prev()},{passive:true});
+addEventListener("keydown",e=>{if(modal.classList.contains("open")||lb.classList.contains("open"))return;
+  if(["ArrowDown","PageDown"," ","ArrowRight"].includes(e.key)){e.preventDefault();if(!locked)next()}
+  if(["ArrowUp","PageUp","ArrowLeft"].includes(e.key)){e.preventDefault();if(!locked)prev()}
+  if(e.key==="Home")goTo(0);if(e.key==="End")goTo(pages.length-1)});
+$("#nextbtn").onclick=()=>curI===pages.length-1?goTo(0):next();
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute("href").slice(1);const k=pages.findIndex(p=>p.id===id);if(k>-1){e.preventDefault();goTo(k)}});
+{const h=location.hash.slice(1);const k=pages.findIndex(p=>p.id===h);goTo(k>-1?k:0,true)}
+
+// ===== 3D PACKAGING STUDIO =====
+(function(){
+  const M=CONTENT.mockups, cv=$("#pk3d"); let mi=0;
+  $("#pthumbs").innerHTML=M.map((m,i)=>{const t=m.type==="jar"?m.label:m.type==="bottle"?m.front.replace(".png",""):(m.front||m.tex.front);const ext=m.type==="bottle"?".png":".jpg";
+    return `<button class="pth ${m.type==="jar"?"wide":""}" data-i="${i}" title="${m.name}"><img src="img/pk/${t}${ext}" alt="${m.name}" loading="lazy"></button>`}).join("");
+  const thumbs=[...document.querySelectorAll(".pth")];
+  function info(){const m=M[mi];$("#pinfo").innerHTML=`<span class="pk-kind">${m.kind}</span><h3>${m.name}</h3><div class="pk-brand">${m.brand}</div><p>${m.desc}</p>`;
+    thumbs.forEach((t,k)=>t.classList.toggle("on",k===mi));$("#pkCount").textContent=String(mi+1).padStart(2,"0")+" / "+String(M.length).padStart(2,"0")}
+  thumbs.forEach(t=>t.onclick=()=>{mi=+t.dataset.i;build()});
+  $("#pkPrev").onclick=()=>{mi=(mi-1+M.length)%M.length;build()};$("#pkNext").onclick=()=>{mi=(mi+1)%M.length;build()};
+  if(!window.THREE){info();cv.replaceWith(Object.assign(document.createElement("img"),{src:"img/lbl/l-anti.jpg",className:"pk-fallback"}));return}
+  let R;try{R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){info();return}
+  R.setPixelRatio(Math.min(devicePixelRatio,2));R.outputEncoding=THREE.sRGBEncoding;
+  const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(30,1,.1,100);cam.position.set(0,.6,10.5);cam.lookAt(0,0,0);
+  scene.add(new THREE.HemisphereLight(0xffffff,0xd9d4c8,.75));
+  const key=new THREE.DirectionalLight(0xffffff,.75);key.position.set(4,6,7);scene.add(key);
+  const fill=new THREE.DirectionalLight(0xfff1cc,.35);fill.position.set(-6,2,4);scene.add(fill);
+  const rim=new THREE.DirectionalLight(0xffffff,.45);rim.position.set(0,5,-7);scene.add(rim);
+  // soft shadow
+  const sc=document.createElement("canvas");sc.width=sc.height=256;const g2=sc.getContext("2d");const gr=g2.createRadialGradient(128,128,10,128,128,128);gr.addColorStop(0,"rgba(30,31,42,.45)");gr.addColorStop(1,"rgba(30,31,42,0)");g2.fillStyle=gr;g2.fillRect(0,0,256,256);
+  const shadow=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),transparent:true,depthWrite:false}));shadow.rotation.x=-Math.PI/2;scene.add(shadow);
+  const TL=new THREE.TextureLoader(),cache={};
+  function tex(n){const f=n.includes(".")?n:n+".jpg";if(cache[f])return cache[f];const t=TL.load("img/pk/"+f);t.encoding=THREE.sRGBEncoding;t.anisotropy=R.capabilities.getMaxAnisotropy();cache[f]=t;return t}
+  const mat=(t,o={})=>new THREE.MeshStandardMaterial(Object.assign({map:tex(t),roughness:.55,metalness:0},o));
+  const col=(c,o={})=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.5,metalness:0},o));
+  let grp=null;
+  function makeBox(m){const [w,h,d]=m.dims,T=m.tex;const g=new THREE.Group();
+    const mats=[mat(T.right),mat(T.left),T.top?mat(T.top):col(0xdddddd),T.bottom?mat(T.bottom):col(0xdddddd),mat(T.front),mat(T.back)];
+    g.add(new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mats));return {g,h}}
+  function makeBag(m){const {g,h}=makeBox(Object.assign({},m,{tex:Object.assign({},m.tex,{bottom:m.tex.top})}));const [w]=m.dims;
+    const neck=new THREE.Mesh(new THREE.CylinderGeometry(.09,w*.5,.55,32,1,true),mat(m.tex.top,{side:THREE.DoubleSide}));neck.position.y=h/2+.27;g.add(neck);
+    const tie=new THREE.Mesh(new THREE.TorusGeometry(.1,.035,12,32),col(0xe2b13c,{metalness:.6,roughness:.3}));tie.rotation.x=Math.PI/2;tie.position.y=h/2+.5;g.add(tie);
+    const tuft=new THREE.Mesh(new THREE.ConeGeometry(.22,.3,24,1,true),mat(m.tex.top,{side:THREE.DoubleSide}));tuft.position.y=h/2+.68;tuft.rotation.x=Math.PI;g.add(tuft);
+    return {g,h:h+.9}}
+  function makeJar(m){const g=new THREE.Group(),r=.86,H=2.15;
+    const honey=new THREE.Mesh(new THREE.CylinderGeometry(r,r,H,64),new THREE.MeshPhysicalMaterial({color:m.honey,roughness:.18,metalness:.05,clearcoat:1,clearcoatRoughness:.08,emissive:m.honey,emissiveIntensity:.18}));g.add(honey);
+    const lh=2*Math.PI*(r+.012)/3.9;const lt=tex(m.label);
+    const label=new THREE.Mesh(new THREE.CylinderGeometry(r+.012,r+.012,lh,128,1,true),new THREE.MeshStandardMaterial({map:lt,roughness:.6}));label.rotation.y=-m.face*Math.PI*2;g.add(label);
+    const neck=new THREE.Mesh(new THREE.CylinderGeometry(r*.82,r,.22,64),new THREE.MeshPhysicalMaterial({color:m.honey,roughness:.12,clearcoat:1}));neck.position.y=H/2+.11;g.add(neck);
+    const lid=new THREE.Mesh(new THREE.CylinderGeometry(r*.9,r*.9,.42,64),col(0xc9a04a,{metalness:.75,roughness:.28}));lid.position.y=H/2+.42;g.add(lid);
+    const top=new THREE.Mesh(new THREE.CylinderGeometry(r*.86,r*.9,.04,64),col(0xd8b25c,{metalness:.8,roughness:.2}));top.position.y=H/2+.65;g.add(top);
+    return {g,h:H+.9}}
+  function makeBottle(m){const g=new THREE.Group();const pts=[];const R0=.72,H=3.0;
+    pts.push(new THREE.Vector2(0,-H/2));pts.push(new THREE.Vector2(R0*.96,-H/2));pts.push(new THREE.Vector2(R0,-H/2+.08));pts.push(new THREE.Vector2(R0,H/2-.55));
+    for(let k=1;k<=10;k++){const a=k/10;pts.push(new THREE.Vector2(R0-(R0-.26)*Math.sin(a*Math.PI/2),H/2-.55+.5*a))}
+    pts.push(new THREE.Vector2(.26,H/2+.25));
+    const body=new THREE.Mesh(new THREE.LatheGeometry(pts,96),new THREE.MeshPhysicalMaterial({color:0x3d1206,roughness:.1,metalness:0,clearcoat:1,clearcoatRoughness:.05}));g.add(body);
+    const cap=new THREE.Mesh(new THREE.CylinderGeometry(.32,.32,.6,48),col(0x1e1f2a,{roughness:.35}));cap.position.y=H/2+.5;g.add(cap);
+    const lh=2.25,arc=lh*827/1890,th=arc/(R0+.01);
+    const lf=new THREE.Mesh(new THREE.CylinderGeometry(R0+.01,R0+.01,lh,64,1,true,-th/2,th),new THREE.MeshStandardMaterial({map:tex(m.front),transparent:true,alphaTest:.4,roughness:.5}));lf.position.y=-.2;g.add(lf);
+    const lb2=new THREE.Mesh(new THREE.CylinderGeometry(R0+.01,R0+.01,lh,64,1,true,Math.PI-th/2,th),new THREE.MeshStandardMaterial({map:tex(m.back),transparent:true,alphaTest:.4,roughness:.5}));lb2.position.y=-.2;g.add(lb2);
+    return {g,h:H+.8}}
+  function pouchGeo(w,h,sign){const geo=new THREE.PlaneGeometry(w,h,40,60),p=geo.attributes.position;
+    for(let k=0;k<p.count;k++){const x=p.getX(k),y=p.getY(k),u=x/w+.5,v=y/h+.5;let z=.32*Math.pow(Math.sin(Math.PI*u),.7)*Math.pow(Math.sin(Math.PI*Math.min(1,v*1.02)),.55);
+      if(v>.9)z*=Math.max(0,(1-v)/.1);if(v<.08)z*=.6+v*5; p.setZ(k,z*sign)} geo.computeVertexNormals();return geo}
+  function makePouch(m){const g=new THREE.Group();
+    const f=new THREE.Mesh(pouchGeo(m.w,m.h,1),mat(m.front,{side:THREE.FrontSide,roughness:.4}));g.add(f);
+    const bm=m.back?mat(m.back,{roughness:.4}):col(m.backColor,{roughness:.4});const b=new THREE.Mesh(pouchGeo(m.w,m.h,1),bm);b.rotation.y=Math.PI;g.add(b);
+    return {g,h:m.h}}
+  function build(){info();if(grp){scene.remove(grp);grp.traverse(o=>{if(o.geometry)o.geometry.dispose()})}
+    const m=M[mi];const r=m.type==="box"?makeBox(m):m.type==="bag"?makeBag(m):m.type==="jar"?makeJar(m):m.type==="bottle"?makeBottle(m):makePouch(m);
+    grp=new THREE.Group();grp.add(r.g);r.g.position.y=0;scene.add(grp);
+    const bb=new THREE.Box3().setFromObject(grp),sz=bb.getSize(new THREE.Vector3()),c=bb.getCenter(new THREE.Vector3());r.g.position.y-=c.y;
+    const s=3.4/Math.max(sz.y,sz.x*.85);grp.scale.setScalar(s);
+    shadow.position.y=-sz.y*s/2-.02;shadow.scale.set(Math.max(sz.x,sz.z)*s*1.7,Math.max(sz.x,sz.z)*s*1.2,1);
+    ry=-.5;vel=.012;grp.rotation.y=ry}
+  function size(){const r=cv.getBoundingClientRect();if(!r.width)return;R.setSize(r.width,r.height,false);cam.aspect=r.width/r.height;cam.updateProjectionMatrix()}
+  addEventListener("resize",size);
+  let ry=0,vel=.006,rx=-.06,drag=false,lx=0,ly=0,active=false;
+  cv.addEventListener("pointerdown",e=>{drag=true;lx=e.clientX;ly=e.clientY;cv.setPointerCapture(e.pointerId)});
+  cv.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;vel=dx*.01;ry+=dx*.01;rx=Math.max(-.5,Math.min(.4,rx+dy*.004))});
+  cv.addEventListener("pointerup",()=>drag=false);
+  addEventListener("pagechange",e=>{active=e.detail==="packaging";if(active){size();if(!grp)build()}});
+  if(curI===pages.findIndex(p=>p.id==="packaging")){active=true;size();build()}
+  (function loop(){requestAnimationFrame(loop);if(!active||!grp)return;if(!drag){vel+=(.006-vel)*.03;ry+=vel}grp.rotation.y=ry;grp.rotation.x=rx;R.render(scene,cam)})();
+  info();
+})();
+
+// cursor + hero parallax
+const cur=$("#cur");
+if(fine){addEventListener("pointermove",e=>{cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px"},{passive:true});
+  document.querySelectorAll("a,button,.cc,.fi,.tc,.case,.cl,.lw,.md").forEach(el=>{el.addEventListener("pointerenter",()=>cur.classList.add("big"));el.addEventListener("pointerleave",()=>cur.classList.remove("big"))});}
+let mx=0,my=0;
+addEventListener("pointermove",e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;
+  document.querySelectorAll(".fly").forEach(f=>{const d=+f.dataset.depth;f.style.transform=`translate(${mx*d}px,${my*d}px) rotate(var(--rz)) rotateY(${mx*20}deg) rotateX(${-my*20}deg)`})},{passive:true});
+document.querySelectorAll(".fly").forEach(f=>f.style.transform="rotate(var(--rz))");
+
+// 3D logo mark (three.js)
+(function(){
+  const cv=$("#logo3d");
+  if(!window.THREE){cv.style.display="none";$("#logoFallback").style.display="block";return}
+  let renderer;try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(e){cv.style.display="none";$("#logoFallback").style.display="block";return}
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene(), cam=new THREE.PerspectiveCamera(35,1,.1,100); cam.position.set(0,0,9);
+  scene.add(new THREE.AmbientLight(0xffffff,.55));
+  const dl=new THREE.DirectionalLight(0xffffff,.9);dl.position.set(4,6,8);scene.add(dl);
+  const dl2=new THREE.DirectionalLight(0xffe08a,.5);dl2.position.set(-6,-2,4);scene.add(dl2);
+  const ink=new THREE.MeshStandardMaterial({color:0x2a2b38,metalness:.35,roughness:.35});
+  const yel=new THREE.MeshStandardMaterial({color:0xffc20e,metalness:.2,roughness:.3});
+  const g=new THREE.Group();
+  // the "D" ring, open on the left
+  const arc=Math.PI*1.45, tor=new THREE.Mesh(new THREE.TorusGeometry(1.55,.34,40,160,arc),ink);
+  tor.rotation.z=-arc/2; g.add(tor);
+  // rounded caps
+  [ -arc/2, arc/2 ].forEach(a=>{const s=new THREE.Mesh(new THREE.SphereGeometry(.34,32,32),ink);s.position.set(Math.cos(a)*1.55,Math.sin(a)*1.55,0);g.add(s)});
+  // yellow half-moon inside
+  const sh=new THREE.Shape(); sh.moveTo(0,-.95); sh.absarc(0,0,.95,-Math.PI/2,Math.PI/2,false); sh.lineTo(0,-.95);
+  const hg=new THREE.ExtrudeGeometry(sh,{depth:.34,bevelEnabled:true,bevelThickness:.06,bevelSize:.05,bevelSegments:6,curveSegments:64}); hg.translate(0,0,-.17);
+  const half=new THREE.Mesh(hg,yel); half.position.x=-.18; g.add(half);
+  // the colon dots ":"
+  [.52,-.52].forEach(y=>{const d=new THREE.Mesh(new THREE.SphereGeometry(.28,32,32),yel);d.position.set(-2.35,y,0);g.add(d)});
+  g.scale.setScalar(.82); g.position.x=.35; scene.add(g);
+  // floating confetti
+  const bits=[];for(let i=0;i<14;i++){const geo=i%3?new THREE.SphereGeometry(.08+Math.random()*.08,16,16):new THREE.TorusGeometry(.14,.045,12,32);
+    const m=new THREE.Mesh(geo,i%2?yel:ink);m.position.set((Math.random()-.5)*7,(Math.random()-.5)*6,(Math.random()-.5)*3-1);m.userData={s:Math.random()*2+.5,o:Math.random()*6};scene.add(m);bits.push(m)}
+  function size(){const r=cv.getBoundingClientRect();renderer.setSize(r.width,r.height,false);cam.aspect=r.width/r.height;cam.updateProjectionMatrix()}
+  size();addEventListener("resize",size);
+  let t=0,rx=0,ry=0;
+  (function loop(){t+=.012;ry+=((mx*.9+Math.sin(t)*.35)-ry)*.05;rx+=((my*.5)-rx)*.05;g.rotation.y=ry;g.rotation.x=rx;g.position.y=Math.sin(t*1.3)*.12; g.position.x=.35;
+    bits.forEach(b=>{b.position.y+=Math.sin(t*b.userData.s+b.userData.o)*.004;b.rotation.x+=.01;b.rotation.y+=.012});
+    renderer.render(scene,cam);requestAnimationFrame(loop)})();
+})();
+</script>
+</body>
+</html>
